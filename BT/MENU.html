@@ -11,24 +11,35 @@
    
 <body>
 
+   
      
     <header>
         <div class="wrapper">
-            <div>
-                <!-- ul>li*4>a[href=page$.html] -->
-                <ul class="navigation">
-                    <li><a href="page1.html">MY WALL<!--<span class="nombre_del_icono_obtenido_de_mi_tipografía_en_fonts_y_copiada_en_mi_CSS"></span>--></a></li>
-                    <li><a href="page2.html">LIBRARY</a></li>
-                    <li><a href="page3.html">SEARCH VIDEOS</a></li>
-                    <li><a href="page4.html">SEARCH PEOPLE</a></li>
-                </ul>
-            </div>
+            
+                <!-- ul[class="navigation"]>li*4>a[href="page$.html"] -->
+                
+            <ul class="navigation">
+                    
+                    <li class="drop-down">
+                       <span>SEARCH</span>
+                       <ul>
+                           <li><a href="page5.html">VIDEOS</a></li>
+                           <li><a href="page6.html">PEOPLE</a></li>
+                       </ul>
+                    </li>
+                    <li class="normal"><a href="INDEX.html">MY WALL<!--<span class="nombre_del_icono_obtenido_de_mi_tipografía_en_fonts_y_copiada_en_mi_CSS"></span>--></a></li>
+                    <li class="normal"><a href="page2.html">LIBRARY</a></li>
+                    <li class="normal"><a href="SIGN-IN.html">SIGN-OUT</a></li>
+                    
+            </ul>
+            
         </div>
     </header>
     
     <main>
         <div class="wrapper"></div>
     </main>
+    
     <footer>
         <div class="wrapper"></div>
 	</footer>

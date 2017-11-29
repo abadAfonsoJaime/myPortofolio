@@ -1,14 +1,15 @@
 body{
-    background-color: yellow;
+    
 }
 
 main {
     float: left;
     width: 100%;
     margin: 45px 0;
+    background-color: yellow;
 }
 
-main > .wrapper{
+main > div.wrapper{
     width: 960px;
     margin: 0 auto;
 }
@@ -19,44 +20,95 @@ header, footer{
     background-color: orange;
 }
 
------------------------------------------------------------------
-/* Menu*/
+/*-----------------------------------------------------------------
+ Menu */
 
 ul.navigation {
+    float: left;
+    width: 100%;
+    margin: 0 2%;
     padding-left: 0;
     list-style-type: none;
+    text-align: center; /* centramos el contenido del <ul> (<li>)*/
 } 
 
 ul.navigation > li{
-    display: inline-block;
-    width: 24.3%;
-    text-align: center;
+    display: inline-block; /* evita el salto de linea (inline) pero permite la distribución de bloque */
+    width: 20%; /* al ser inline-block estaban ocupando el tamaño de su contenido */
+    text-align: center; /* centramos el contenido del <li> (<a>) Aunque en realidad el agent user: Chrome W10 le da una propieda webkit que hace que herede el text align del padre, luego sería inncesario*/
     background-color: darkblue;
     transition: background-color 2s;
 }
 
-ul.navigation > li:hover{
-    background-color: skyblue;
-    width:25%;
-}
-
 /*
-    a:link
+    a(:link)
     a:visited
     a:hover
     a:active
 */
-ul.navigation > li > a,
-ul.navigation > li > a:visited{
+
+ul.navigation > li.normal:hover{ /* al pasar el ratón por un contenedor <li> se cambia su bg-color y su width */
+    background-color: skyblue;
+    width:25%;
+}
+
+ul.navigation li:hover{
+    background-color: skyblue;
+}
+
+/* Cuando pasee el ratón por el li quiero que su hijo cambie su color */
+ul.navigation li:hover > a{
     color: yellow;
 }
 
-/* Cuando pasee el ratón por el enlace quiero que su padre cambie su color de fondo  */
-ul.navigation > li:hover > a{
-    color: red;
+ul.navigation li:hover > span{
+    color: yellow;
 }
------------------------------------------------------------------
-/*Formulario*/
+
+ul.navigation li > span{
+    color: white;
+}
+
+ul.navigation li > a{
+    color: white; /* ya que si no se especifíca heredaría la propiedad del padre (contendor <li>) */
+}
+
+ul.navigation li > a:visited{
+    color: yellow;
+}
+
+
+ul.navigation li > a:hover{
+     color: darkblue;
+}
+
+
+li.drop-down {
+    height: 18px;
+    position: relative;
+}
+
+li.drop-down > ul {
+    position: absolute;
+    display: none;
+}
+
+li.drop-down > ul > li {
+    background-color: darkblue;
+}
+
+li.drop-down:hover > ul {
+    top: 18px;
+    left: 0;
+    display: block;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+/*---
+-------------------------------------------------------------
+Formulario*/
 
 form{
     width: 100%;
@@ -85,8 +137,8 @@ form{
     margin-bottom: 5%;
 }
 
-------------------------------------------------------------------
-/*Sign-ini*/
+/*------------------------------------------------------------------
+Sign-ini*/
 
 .text-right{
     text-align: right;
