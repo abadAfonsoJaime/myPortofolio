@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Form</title>
+    
+    <link rel="stylesheet" href="css/myStyleSheet.css" type="text/css">
+    
+</head>
+
+
+<body>
+  <!-- ((div[class=""])>div[class="wrapper"])*3 -->
+  
+  <div class="header"></div>
+      <div class="wrapper"></div>
+  
+  <div class="main"></div>
+      <div class="wrapper"></div>
+  
+   
+            <form action="SIGN-IN.html" method="post">
+   
+  
+  <!-- ((div[class="left-col"]>label[for])+div[class="right-col"]>input)*10 -->
+  
+<div class="left-col">
+    <label for="Name and Surname">Name and Surname</label>
+</div>
+<div class="right-col">
+    <input type="text" name="Name and Surname" id="Name and Surname" placeholder="Type here your Name and Surname" required />
+</div>
+
+<div class="left-col">
+    <label for="Username">Username</label>
+</div>
+<div class="right-col">
+    <input type="text" name="Username" id="Username" placeholder="Choose a username" required />
+</div>
+
+<div class="left-col">
+    <label for="E-mail">E-mail</label>
+</div>
+<div class="right-col">
+    <input type="email" name="E-mail" id="E-mail" placeholder="Type your e-mail" maxlength="255" required />
+</div>
+
+<div class="left-col">
+    <label for="Password">Password</label>
+</div>
+<div class="right-col">
+    <input type="password" name="Password" id="Password" placeholder="Choose a password" maxlength="20" required />
+</div>
+
+<div class="left-col">
+    <label for="Confirm Password">Confirm Password</label>
+</div>
+<div class="right-col"><input type="password" name="Confirm Password" id="Confirm Password" placeholder="Confirm your Password" maxlength="20" required />
+</div>
+
+<div class="left-col">
+    <label for="GenderN">Gender</label>
+</div>
+<div class="right-col">
+    Hombre: <input type="radio" name="Gender" id="GenderM" value="M" />
+    Mujer: <input type="radio" name="Gender" id="GenderF" value="F" />
+    NS/NC: <input type="radio" name="Gender" id="N" value="N" />
+</div>
+
+<div class="left-col">
+    <label for="Age">Age</label>
+</div>
+<div class="right-col">
+    <input type="number" name="Age" id="Age" min="18" max="99" placeholder="Age" required />
+</div>
+
+<div class="left-col">
+    <label for="Birthday">Birthday</label>
+</div>
+<div class="right-col">
+    <input type="date" />
+</div>
+
+<div class="left-col">
+    <label for="Country">Country</label>
+</div>
+<div class="right-col">
+    <select name="Country" id="Country">
+        <!-- option[value=$]*5 -->
+        <option value="0">--Select your Country-</option>
+        <option value="1">P1</option>
+        <option value="2">P2</option>
+        <option value="3">P3</option>
+        <option value="4">P4</option>
+        <option value="5">P5</option>
+    </select>
+</div>
+
+<div class="left-col">
+    <label for="Province">Province</label>
+</div>
+<div class="right-col">
+    <select name="Province" id="Province" disabled>
+        <option value="0">--Select your province--</option>
+        <option value="1">P1</option>
+        <option value="2">P2</option>
+    </select>
+</div>
+
+<div class="left-col">
+    <label for="Description">Description</label>
+</div>
+<div class="right-col">
+    <textarea name="Description" id="Description" placeholder="User information" cols="30" rows="5"> </textarea>
+</div>
+
+<div class="left-col">
+    <label for="Terms of condition"><a href="https://es-es.facebook.com/privacy/explanation" target="_blank">Legal Terms</a></label>
+</div>
+<div class="right-col">
+    <input type="checkbox" name="Terms of condition" id="Terms of condition" required /><span>accept the legal terms</span>
+</div>
+
+<div class="center">
+    <input type="submit" value="continue" />
+</div>
+
+            </form>
+   
+   
+   <div class="footer"></div>
+      <div class="wrapper"></div>
+    
+</body>
+</html>
