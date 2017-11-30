@@ -17,7 +17,7 @@ main > div.wrapper{
 header, footer{
     width: 100%;
     float: left;
-    background-color: orange;
+    background-color: yellow;
 }
 
 /*-----------------------------------------------------------------
@@ -36,7 +36,7 @@ ul.navigation > li{
     display: inline-block; /* evita el salto de linea (inline) pero permite la distribución de bloque */
     width: 20%; /* al ser inline-block estaban ocupando el tamaño de su contenido */
     text-align: center; /* centramos el contenido del <li> (<a>) Aunque en realidad el agent user: Chrome W10 le da una propieda webkit que hace que herede el text align del padre, luego sería inncesario*/
-    background-color: darkblue;
+    background-color: purple;
     transition: background-color 2s;
 }
 
@@ -48,21 +48,21 @@ ul.navigation > li{
 */
 
 ul.navigation > li.normal:hover{ /* al pasar el ratón por un contenedor <li> se cambia su bg-color y su width */
-    background-color: skyblue;
+    background-color: violet;
     width:25%;
 }
 
 ul.navigation li:hover{
-    background-color: skyblue;
+    background-color: violet;
 }
 
 /* Cuando pasee el ratón por el li quiero que su hijo cambie su color */
 ul.navigation li:hover > a{
-    color: yellow;
+    color: white;
 }
 
 ul.navigation li:hover > span{
-    color: yellow;
+    color: white;
 }
 
 ul.navigation li > span{
@@ -70,7 +70,7 @@ ul.navigation li > span{
 }
 
 ul.navigation li > a{
-    color: white; /* ya que si no se especifíca heredaría la propiedad del padre (contendor <li>) */
+    color: yellow; /* ya que si no se especifíca heredaría la propiedad del padre (contendor <li>) */
 }
 
 ul.navigation li > a:visited{
@@ -79,7 +79,7 @@ ul.navigation li > a:visited{
 
 
 ul.navigation li > a:hover{
-     color: darkblue;
+     color: purple;
 }
 
 
@@ -91,10 +91,12 @@ li.drop-down {
 li.drop-down > ul {
     position: absolute;
     display: none;
+    width: 337.6px; /* Dato del li.drop-down visto con el inspector */
 }
 
 li.drop-down > ul > li {
-    background-color: darkblue;
+    background-color: purple;
+    display: inline-block;        
 }
 
 li.drop-down:hover > ul {
@@ -103,6 +105,7 @@ li.drop-down:hover > ul {
     display: block;
     list-style-type: none;
     padding-left: 0;
+    width: 337.6px; /* Dato del li.drop-down visto con el inspector */
 }
 
 
