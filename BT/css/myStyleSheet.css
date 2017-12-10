@@ -23,7 +23,7 @@ header, footer{
 /*-----------------------------------------------------------------
  Menu */
 
-ul.navigation {
+nav ul.navigation {
     float: left;
     width: 100%;
     margin: 0 2%;
@@ -32,12 +32,12 @@ ul.navigation {
     text-align: center; /* centramos el contenido del <ul> (<li>)*/
 } 
 
-ul.navigation > li{
+nav ul.navigation li{
     display: inline-block; /* evita el salto de linea (inline) pero permite la distribución de bloque */
     width: 20%; /* al ser inline-block estaban ocupando el tamaño de su contenido */
     text-align: center; /* centramos el contenido del <li> (<a>) Aunque en realidad el agent user: Chrome W10 le da una propieda webkit que hace que herede el text align del padre, luego sería inncesario*/
     background-color: purple;
-    transition: background-color 2s;
+    transition: background-color 1s;
 }
 
 /*
@@ -47,65 +47,64 @@ ul.navigation > li{
     a:active
 */
 
-ul.navigation > li.normal:hover{ /* al pasar el ratón por un contenedor <li> se cambia su bg-color y su width */
+nav ul.navigation > li.normal:hover{ /* al pasar el ratón por un contenedor <li> se cambia su bg-color y su width */
     background-color: violet;
     width:25%;
 }
 
-ul.navigation li:hover{
+nav ul.navigation li:hover{
     background-color: violet;
 }
 
 /* Cuando pasee el ratón por el li quiero que su hijo cambie su color */
-ul.navigation li:hover > a{
+nav ul.navigation li:hover > a{
     color: white;
 }
 
-ul.navigation li:hover > span{
+nav ul.navigation li > span{
     color: white;
 }
 
-ul.navigation li > span{
-    color: white;
-}
-
-ul.navigation li > a{
+nav ul.navigation li > a{
     color: yellow; /* ya que si no se especifíca heredaría la propiedad del padre (contendor <li>) */
 }
 
-ul.navigation li > a:visited{
-    color: yellow;
-}
+nav ul.navigation li:visited > a{
+    border: ;
+} /* Cuando haya visitado el enlace quiero que su padre cambie su border  */
 
 
-ul.navigation li > a:hover{
+nav ul.navigation li > a:hover{
      color: purple;
 }
 
 
-li.drop-down {
-    height: 18px;
+nav li.dropdown {
     position: relative;
+    
 }
 
-li.drop-down > ul {
+nav li.dropdown > ul {
     position: absolute;
-    display: none;
-    width: 337.6px; /* Dato del li.drop-down visto con el inspector */
+    display: none; /* que no se muestre */
+    text-align: center; /* Para que los li hijos estén centrados*/
+    list-style-type: none;
+    padding-left: 0;
 }
 
-li.drop-down > ul > li {
+nav li.dropdown > ul > li {
     background-color: purple;
-    display: inline-block;        
+    display: inline-block;
+    width: 70%;
 }
 
-li.drop-down:hover > ul {
+nav li.dropdown:hover > ul {
     top: 18px;
     left: 0;
     display: block;
     list-style-type: none;
     padding-left: 0;
-    width: 337.6px; /* Dato del li.drop-down visto con el inspector */
+    width: 274.18px; /* Dato del li.drop-down visto con el inspector */
 }
 
 
@@ -138,6 +137,25 @@ form{
     text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+/* Armonizar fuentes tamaños y bordes */
+input, textarea, select {
+    /* Para asegurarse de que todos los campos de texto tienen las mismas propiedades de fuente
+       Por defecto, las areas de texto tienen una fuente con monospace */
+    font: 1em sans-serif;
+
+    /* Para darle el mismo tamaño a todos los campos de texto */
+    width: 60%;
+    box-sizing: border-box;
+
+    /* Para armonizar el look&feel del borde en los campos de texto */
+    border: 1px solid #999;
+}
+
+/* Para dar un destaque en elementos activos*/
+input:focus, textarea:focus, select:focus {
+    border-color: #000;
 }
 
 /*------------------------------------------------------------------

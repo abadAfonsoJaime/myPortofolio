@@ -1,0 +1,62 @@
+
+/*  +++++++++++++++++   FORMULARIO   +++++++++++++++++++++++  */
+
+form {
+    /* Sólo para centrar el formulario a la página */
+    margin: 0 auto;
+    width: 400px;
+    /* Para ver el borde del formulario */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+/* Para ver algo de espacio entre los campos */
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    /* Para asegurarse que todos los labels tienen el mismo tamaño y están alineados correctamente */
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+}
+
+/* Armonizar fuentes tamaños y bordes */
+input, textarea, select {
+    /* Para asegurarse de que todos los campos de texto tienen las mismas propiedades de fuente
+       Por defecto, las areas de texto tienen una fuente con monospace */
+    font: 1em sans-serif;
+
+    /* Para darle el mismo tamaño a todos los campos de texto */
+    width: 60%;
+    box-sizing: border-box;
+
+    /* Para armonizar el look&feel del borde en los campos de texto */
+    border: 1px solid #999;
+}
+
+/* Para dar un destaque en elementos activos*/
+input:focus, textarea:focus select:focus{
+    
+    border-color: #000;
+}
+
+textarea {
+    /* Para alinear campos de texto multilínea con sus labels */
+    vertical-align: top;
+
+    /* Para dar suficiente espacio para escribir texto */
+    height: 8em;
+
+    /* Para permitir a los usuarios cambiar el tamaño de cualquier textarea verticalmente
+        No funciona en todos los navegadore: de momento solo con Chrome si tiene el flag "Experimental Web Plarform Features" */
+   resize: vertical;
+}
+
+.button {
+    /* Para posicionar los botones a la misma posición que los campos de texto */
+    padding-left: 30%; /* mismo tamaño a todos los elementos label */
+}
+
