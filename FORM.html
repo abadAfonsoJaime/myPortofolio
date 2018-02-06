@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    
+</head>
+<body>
+    
+
+<header>
+    <div class="wrapper">
+        
+    </div>
+</header>
+
+<!-- Los wrapper son opcionales quizá haya que quitarlos -->
+<main>
+    <div class="wrapper">
+        <form action="webLogOn.html" method="post">
+            
+        <div>
+           <label for="Username">Username</label>
+           <input type="text" name="Username" id="Username" maxlength="20" placeholder="Type here your name" required />
+        </div>
+        
+        <div>
+            <label for="E-mail">E-mail</label>
+            <input type="text" name="E-mail" id="E-mail" maxlength="255" placeholder="Type here your e-mail " required />
+        </div>
+          
+        <div>
+            <label for="Password">Password</label>
+            <input type="password" name="Password" id="Password" placeholder="Choose a password" minlength="8" required />
+        </div>
+        
+        <div>
+            <label for="Confirm Password">Confirm Password</label>
+            <input type="password" name="Confirm Password" id="Confirm Password" placeholder="Type your password again" required />
+        </div>
+        
+        <div>
+            <label for="Profile">Profile</label>
+            <select name="Profile" id="Profile" required>
+                <option value="0" selected>Amateur</option>
+                <option value="A">Amateur</option>
+                <option value="1">Student</option>
+                <option value="2">Tourist Guide</option>
+                <option value="3">Professional</option>
+                <option value="4">Educational center / Professor</option> 
+            </select> 
+        </div>
+        
+        <div>
+            <label for="Description">Description</label>
+            <textarea name="Description" id="Description" placeholder="User information"> </textarea>
+</div>
+        
+        <div class="button">
+            <button type="submit">Submit</button>
+        </div>
+       
+        </form>
+    </div>
+</main>
+
+
+<footer>
+    <div class="wrapper">
+        
+    </div>
+</footer>
+
+
+</body>
+</html>
